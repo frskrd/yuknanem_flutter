@@ -1,16 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:yuknanem/utilities/constant.dart';
 
-class FavoriteButton extends StatelessWidget {
-  const FavoriteButton({super.key, required this.isSelected});
+class FavoriteButton extends StatefulWidget {
+  FavoriteButton({super.key, this.isSelected = false});
 
-  final bool isSelected;
+  bool isSelected;
+
+  @override
+  State<FavoriteButton> createState() => _FavoriteButtonState();
+}
+
+class _FavoriteButtonState extends State<FavoriteButton> {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-        onPressed: () {},
+        onPressed: () {
+          setState(() {
+            widget.isSelected = !widget.isSelected;
+          });
+        },
         icon: Icon(
-          isSelected ? Icons.favorite_border : Icons.favorite,
+          widget.isSelected ? Icons.favorite_border : Icons.favorite,
           color: secondaryColor,
         ),
         color: secondaryColor);
