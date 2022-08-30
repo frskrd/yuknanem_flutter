@@ -185,7 +185,7 @@ packages:
     source: hosted
     version: "1.10.0"
   lints:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: lints
       url: "https://pub.dartlang.org"

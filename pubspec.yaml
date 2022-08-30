@@ -18,6 +18,7 @@ dependencies:
   flutter_native_splash: ^2.2.7
   font_awesome_flutter: ^10.1.0
   introduction_screen: ^3.0.2
+  lints: ^2.0.0
   lottie: ^1.4.1
 
 dev_dependencies:
